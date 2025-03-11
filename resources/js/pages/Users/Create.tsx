@@ -9,7 +9,7 @@ const Create: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
         const data = new FormData(e.currentTarget);
-        Inertia.post('/books', Object.fromEntries(data), {
+        Inertia.post('/users', Object.fromEntries(data), {
             onFinish: () => setIsSubmitting(false),
         });
     };
